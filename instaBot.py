@@ -6,8 +6,11 @@ from get_users_post import get_users_post
 from self_info import self_info
 from constants import APP_ACCESS_TOKEN, BASE_URL
 from like_a_post import like_a_post
+from post_a_comment import post_a_comment
+
+#main program
 while True:
-    choice = raw_input("Enter you choice:\n1.gey self information \n2.get own post \n3.get user's information \n4.get user's id \n5.get user's post \n6.like the post")
+    choice = raw_input("Enter you choice:\n1.gey self information \n2.get own post \n3.get user's information \n4.get user's id \n5.get user's post \n6.like the post \n7.post a comment")
     choice = int(choice)
     if choice == 1:
         self_info()
@@ -25,6 +28,9 @@ while True:
     elif choice == 6:
         insta_username = raw_input("Enter the username of the user: ")
         like_a_post(insta_username)
+    elif choice == 7:
+        insta_username = raw_input("Enter the username of the user: ")
+        post_a_comment(insta_username)
     else:
         print("wrong choice")
         exit()
