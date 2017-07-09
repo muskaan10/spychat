@@ -23,4 +23,4 @@ while True:
         get_users_post(insta_username)
     else:
         print("wrong choice")
-        exit(0)
+        exit()
