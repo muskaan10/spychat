@@ -5,6 +5,7 @@ from get_user_id import get_user_id
 def get_user_info(insta_username):
     #functions logic
     user_id = get_user_id(insta_username)
+    print user_id
     if user_id == None:
         print 'User does not exist!'
         exit()
