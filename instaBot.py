@@ -10,11 +10,11 @@ from post_a_comment import post_a_comment
 from delete_negative_comments import delete_negative_comment
 from like_list import like_list
 from list_of_comments import list_of_comments
-
+from min_likes import min_likes
 #main program
 
 while True:
-    choice = raw_input("Enter you choice:\n1.gey self information \n2.get own post \n3.get user's information \n4.get user's id \n5.get user's post \n6.like the post \n7.post a comment \n8.delete negative comments \n9.list of likes on recent post of user \n10.list of comments on user's post \n11.exit application")
+    choice = raw_input("Enter you choice:\n1.gey self information \n2.get own post \n3.get user's information \n4.get user's id \n5.get user's post \n6.like the post \n7.post a comment \n8.delete negative comments \n9.list of likes on recent post of user \n10.list of comments on user's post \n11. get minimum like post\n12.exit application")
     choice = int(choice)
 
 
@@ -46,7 +46,10 @@ while True:
     elif choice == 10:
         insta_username = raw_input("Enter the username of the user: ")
         list_of_comments(insta_username)
-    elif choice == 11:
+    elif choice == 11 :
+        insta_username = raw_input("Enter the username of the user: ")
+        min_likes(insta_username)
+    elif choice == 12:
         exit()
     else:
         print("wrong choice")
